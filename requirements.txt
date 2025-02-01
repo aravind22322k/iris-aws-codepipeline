@@ -1,0 +1,7 @@
+apache-airflow
+scikit-learn
+apache-airflow-providers-amazon
+joblib
+boto3
+pandas
+flask
