@@ -50,11 +50,19 @@ try:
     # Add files to Git
     subprocess.run(["git", "add", "data/iris_train.csv", "data/iris_test.csv", "model/iris_model.joblib"], check=True)
     
-    # Commit changes
-    subprocess.run(["git", "commit", "-m", "Updated Iris dataset and trained model"], check=True)
+    # Check if there are changes before committing
+    status_output = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
     
+    if status_output.stdout.strip():  # If there are changes
+        subprocess.run(["git", "commit", "-m", "Updated Iris dataset and trained model"], check=True)
+        print("Changes committed successfully.")
+    else:
+        print("No changes to commit.")
+
     # Push to GitHub
     subprocess.run(["git", "push", "origin", git_branch], check=True)
     print("Files successfully pushed to GitHub repository.")
+except subprocess.CalledProcessError as e:
+    print(f"Error executing Git command: {e}")
 except Exception as e:
-    print(f"Error pushing files to GitHub: {e}")
+    print(f"Unexpected error: {e}")
