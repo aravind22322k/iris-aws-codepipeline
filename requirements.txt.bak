@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+numpy
+pandas
+scikit-learn
+apache-airflow
+apache-airflow-providers-amazon
+joblib
+boto3
+flask
+=======
+apache-airflow
+scikit-learn
+apache-airflow-providers-amazon
+joblib
+boto3
+pandas
+flask
+>>>>>>> 0715e6c5f09ad79cabbd4b79dd3a38f8e12e5b21

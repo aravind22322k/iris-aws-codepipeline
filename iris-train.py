@@ -38,7 +38,7 @@ model_file_path = 'model/iris_model.joblib'
 joblib.dump(model, model_file_path)
 
 # GitHub repo details
-github_repo_url = "git@github.com:your-username/iris-aws-codepipeline.git"  # Change to your GitHub repo
+github_repo_url = "git@github.com:aravind2232k/iris-aws-codepipeline.git"  # Change to your GitHub repo
 git_branch = "main"  # Change if needed
 
 try:
